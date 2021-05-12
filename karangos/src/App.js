@@ -65,12 +65,14 @@ function Main() {
                 <TopBar />
                 <Box id="routed" className={classes.routed}>
                     <Switch>
-                        <Route path='/list'>
+                        <Route path="/list">
                             <KarangosList />
                         </Route>
-                        <Route path='/new'>
+                        <Route path="/form">>
                             <KarangosForm />
                         </Route>
+                            
+                        
                     </Switch>
                 </Box>
                 <FooterBar />
