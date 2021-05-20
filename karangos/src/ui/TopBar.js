@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  logo:{
-      width: '300px'
+  logo: {
+    width: '300px'
   }
 }));
 
@@ -24,8 +24,8 @@ export default function TopBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-            <MainMenu />
-          <img src={logoImg} className={classes.logo} color="inherit" arial-label="menu"></img>
+          <MainMenu />
+          <img src={logoImg} className={classes.logo} alt="Logotipo Karangos" />
         </Toolbar>
       </AppBar>
     </div>
