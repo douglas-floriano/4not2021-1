@@ -33,58 +33,62 @@ import KarangosList from './routed/KarangosList2'
 import KarangosForm from './routed/KarangosForm'
 
 const theme = createMuiTheme({
-  palette: {
-    type: 'dark',
-    primary: {
-      main: yellow[500],
+    palette: {
+        type: 'dark',
+        primary: {
+            main: yellow[500],
+        },
+        secondary: {
+            main: pink[500],
+        },
     },
-    secondary: {
-      main: pink[500],
-    },
-  },
 });
 
 const useStyles = makeStyles((theme) => ({
-  box: {
-    backgroundColor: theme.palette.background.default,
-    minHeight: '100vh',  // 100% da altura da área visível
-    paddingBottom: '42px' // Para que o conteúdo não fique escondido atrás do footer
-  },
-  routed: {
-    padding: '25px',
-    color: theme.palette.text.primary,
-    fontFamily: theme.typography.fontFamily
-  }
+    box: {
+        backgroundColor: theme.palette.background.default,
+        minHeight: '100vh',  // 100% da altura da área visível
+        paddingBottom: '42px' // Para que o conteúdo não fique escondido atrás do footer
+    },
+    routed: {
+        padding: '25px',
+        color: theme.palette.text.primary,
+        fontFamily: theme.typography.fontFamily
+    }
 }));
 
 function Main() {
-  const classes = useStyles()
-  return (
-    <Box className={classes.box}>
-      <BrowserRouter>
-        <TopBar />
-        <Box id="routed" className={classes.routed}>
-          <Switch>
-            <Route path="/list">
-              <KarangosList />
-            </Route>
-            <Route path="/new">
-              <KarangosForm />
-            </Route>
-          </Switch>
+    const classes = useStyles()
+    return (
+        <Box className={classes.box}>
+            <BrowserRouter>
+                <TopBar />
+                <Box id="routed" className={classes.routed}>
+                    <Switch>
+                        <Route path="/list">
+                            <KarangosList />
+                        </Route>
+                        <Route path="/new">
+                            <KarangosForm />
+                        </Route>
+                        {/* :id é um parâmetro  (nomes de parâmetros começam com dois pontos)  */}
+                        <Route path="/edit/:id">
+                            <KarangosForm />
+                        </Route>
+                    </Switch>
+                </Box>
+                <FooterBar />
+            </BrowserRouter>
         </Box>
-        <FooterBar />
-      </BrowserRouter>
-    </Box>
-  )
+    )
 }
 
 function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <Main />  
-    </ThemeProvider>
-  );
+    return (
+        <ThemeProvider theme={theme}>
+            <Main />
+        </ThemeProvider>
+    );
 }
 
 export default App;
