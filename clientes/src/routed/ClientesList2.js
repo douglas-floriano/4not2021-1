@@ -191,7 +191,7 @@ export default function ClientesList() {
             headerAlign: 'center',
             flex: true,
             renderCell: params => (
-                <IconButton aria-label="editar">
+                <IconButton aria-label="editar" onClick={() => history.push(`/editcliente/${params.id}`)}>
                     <EditIcon />
                 </IconButton>
             )
@@ -216,7 +216,7 @@ export default function ClientesList() {
                 Deseja realmente excluir este cliente?
       </ConfirmDialog>
 
-            <Snackbar open={sbOpen} autoHideDuration={6000} onClose={handleSbClose}>
+            <Snackbar open={sbOpen} autoHideDuration={3000} onClose={handleSbClose}>
                 <MuiAlert elevation={6} variant="filled" onClose={handleSbClose} severity={sbSeverity}>
                     {sbMessage}
                 </MuiAlert>
@@ -225,7 +225,7 @@ export default function ClientesList() {
             <h1>Listagem de Clientes</h1>
             <Toolbar className={classes.toolbar}>
                 <Button color="secondary" variant="contained" size="large"
-                    startIcon={<AddBoxIcon />} onClick={() => history.push('/newc')}>
+                    startIcon={<AddBoxIcon />} onClick={() => history.push('/newcliente')}>
                     Novo cliente
         </Button>
             </Toolbar>
