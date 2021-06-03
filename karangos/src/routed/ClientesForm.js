@@ -35,9 +35,9 @@ const useStyles = makeStyles(() => ({
         display: 'flex',
         justifyContent: 'space-around'
     },
-    checkbox: {
-        alignItems: 'center'
-    }
+    // checkbox: {
+    //     alignItems: 'center'
+    // }
 }))
 const formatChars = {
     'A': '[A-Za-z]',
@@ -48,7 +48,7 @@ const formatChars = {
 
 const cpfMask = '000.000.000-00'
 const rgMask = '00.000.000 AAA/AA'
-const telefoneMask = '(00) B 0000-0000'
+const telefoneMask = '(00) B0000-0000'
 
 export default function ClientesForm() {
     const classes = useStyles()

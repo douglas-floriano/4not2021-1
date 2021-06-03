@@ -15,6 +15,7 @@ import ConfirmDialog from '../ui/ConfirmDialog'
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { DataGrid } from '@material-ui/data-grid'
+import { GridColDef } from '@material-ui/data-grid'
 
 const useStyles = makeStyles(theme => ({
     table: {
@@ -99,97 +100,111 @@ export default function ClientesList() {
     function handleSbClose() {
         setSbOpen(false)    // Fecha a snackbar
     }
-
     const columns = [
         {
             field: 'id',
             headerName: 'Cód.',
             align: 'left',
             headerAlign: 'left',
-            flex: true,
+            // flex: true,
+            width: 55,
             disableColumnMenu: true,
             sortComparator: (v1, v2) => Number(v1) > Number(v2) ? 1 : -1
         },
         {
             field: 'nome',
             headerName: 'Nome',
-            flex: true
+            headerAlign: 'center',
+            // flex: true
+            align: 'left',
+            width: 190,
         },
         {
             field: 'cpf',
             headerName: 'CPF',
-            flex: true
+            // flex: true
+            width: 150,
         },
         {
             field: 'rg',
             headerName: 'RG',
             align: 'left',
-            headerAlign: 'left',
-            flex: true
+            // flex: true
+            width: 150,
         },
         {
             field: 'logradouro',
             headerName: 'Logradouro',
             align: 'left',
-            headerAlign: 'left',
-            flex: true,
+            headerAlign: 'center',
+            width: 200,
+            // flex: true,
             sortComparator: (v1, v2) => Number(v1) > Number(v2) ? 1 : -1
         },
         {
             field: 'num_imovel',
             headerName: 'Numero',
-            align: 'center',
+            align: 'left',
             headerAlign: 'left',
-            flex: true,
+            // flex: true,
+            width: 100,
         },
         {
             field: 'complemento',
             headerName: 'Complemento',
             align: 'left',
             headerAlign: 'left',
-            flex: true
+            // flex: true
+            width: 160,
         },
         {
             field: 'bairro',
             headerName: 'Bairro',
             align: 'left',
             headerAlign: 'left',
-            flex: true,
+            // flex: true,
+            width: 150,
         },
         {
             field: 'municipio',
             headerName: 'Municipio',
-            align: 'left',
-            headerAlign: 'left',
-            flex: true,
+            align: 'center',
+            headerAlign: 'center',
+            // flex: true,
+            width: 150,
         },
         {
             field: 'uf',
             headerName: 'UF',
-            align: 'center',
+            align: 'left',
             headerAlign: 'center',
-            flex: true,
+            // flex: true,
+            width: 90,
         },
         {
             field: 'telefone',
             headerName: 'Telefone',
             align: 'left',
-            headerAlign: 'left',
-            flex: true,
+            headerAlign: 'center',
+            // flex: true,
+            width: 180,
         },
         {
             field: 'email',
             headerName: 'Email',
             align: 'left',
-            headerAlign: 'left',
-            flex: true,
+            headerAlign: 'center',
+            // flex: true,
+            width: 245,
         },
         {
             field: 'editar',
             headerName: 'Editar',
             align: 'center',
             headerAlign: 'center',
-            flex: true,
+            width: 125,
+            // flex: true,
+
             renderCell: params => (
                 <IconButton aria-label="editar" onClick={() => history.push(`/editcliente/${params.id}`)}>
                     <EditIcon />
@@ -201,7 +216,8 @@ export default function ClientesList() {
             headerName: 'Excluir',
             align: 'center',
             headerAlign: 'center',
-            flex: true,
+            // flex: true,
+            width: 125,
             renderCell: params => (
                 <IconButton aria-label="excluir" onClick={() => handleDelete(params.id)}>
                     <DeleteIcon color="error" />
