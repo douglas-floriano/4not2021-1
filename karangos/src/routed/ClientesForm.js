@@ -263,7 +263,7 @@ export default function ClientesForm() {
         event.preventDefault() // Evita o recarregamento da página
 
         if (validade(clientes)) saveData()
-        
+        else Alert('Preencha os')
     }
 
     function Alert(props) {
@@ -283,7 +283,7 @@ export default function ClientesForm() {
     function handleDialogClose(result) {
         setDialogOpen(false)
 
-        //Se o usuário concordou em voltar
+        //Se ousuário concordou em voltar
         if (result) history.push('/listcliente')
     }
 
@@ -365,6 +365,7 @@ export default function ClientesForm() {
                     label="Número imovel"
                     variant="filled"
                     value={clientes.num_imovel}
+                    type="number"
                     onChange={handleInputChange}
                     fullWidth
                     required
