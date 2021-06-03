@@ -42,12 +42,13 @@ const useStyles = makeStyles(() => ({
 const formatChars = {
     'A': '[A-Za-z]',
     '0': '[0-9]',
-    '#': '[0-9A-Ja-j]'
+    '#': '[0-9A-Ja-j]',
+    'B': '[9]'
 }
 
 const cpfMask = '000.000.000-00'
 const rgMask = '00.000.000 AAA/AA'
-const telefoneMask = '(00) 0000-0000'
+const telefoneMask = '(00) B 0000-0000'
 
 export default function ClientesForm() {
     const classes = useStyles()
@@ -103,10 +104,10 @@ export default function ClientesForm() {
 
     useEffect(() => {
         //Verficar se possui parâmetro id na rota
-        if (params.id)
+        if (params.id){
             setTitle('Editando o Cliente')
         getData(params.id)
-
+        }
     }, [])
 
     async function getData(id) {
@@ -172,28 +173,28 @@ export default function ClientesForm() {
 
         // trim(): retira os espaços em branco do iníceio e do final de uma String
         //Validação do campo nome
-        if (data.nome === '') {
+        if (data.nome.trim() === '') {
             errorTemp.marca = 'O nome deve ser preenchido'
             isValid = false
         }
 
         //Validação do campo CPF
-        if (isNaN(data.cpf) === ''|| data.cpf.includes('_')) {
+        if (isNaN(data.cpf)=== ''|| data.cpf.includes('_')) {
             errorTemp.cpf = 'O CPF deve ser preenchido corretamente'
             isValid = false
         }
         //Validação do campo RG
-        if (data.rg === '') {
+        if (data.rg.trim() === '') {
             errorTemp.rg = 'O RG deve ser preenchido corretamente'
             isValid = false
         }
         //Validação do campo Logradouro
-        if (data.logradouro === '') {
+        if (data.logradouro.trim() === '') {
             errorTemp.logradouro = 'O Logradouro deve ser preenchido'
             isValid = false
         }
         //Validação do campo número do imóvel
-        if (data.num_imovel ==='') {
+        if (isNaN(data.num_imovel) || Number(data.num_imovel) <=0) {
             errorTemp.num_imovel = 'O número do imóvel deve ser preenchido'
             isValid = false
         }
@@ -262,8 +263,7 @@ export default function ClientesForm() {
         event.preventDefault() // Evita o recarregamento da página
 
         if (validade(clientes)) saveData()
-
-
+        
     }
 
     function Alert(props) {
@@ -283,7 +283,7 @@ export default function ClientesForm() {
     function handleDialogClose(result) {
         setDialogOpen(false)
 
-        //Se ousuário concordou em voltar
+        //Se o usuário concordou em voltar
         if (result) history.push('/listcliente')
     }
 

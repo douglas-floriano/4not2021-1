@@ -104,10 +104,10 @@ export default function KarangosForm() {
 
     useEffect(() => {
 
-        if (params.id)
+        if (params.id){
             setTitle('Editando Karango')
         getData(params.id)
-
+        }
     }, [])
 
 
