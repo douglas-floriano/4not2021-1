@@ -299,7 +299,7 @@ export default function ClientesForm() {
                 Dados não salvos, deseja realmente voltar?
             </ConfirmDialog>
 
-            <Snackbar open={snackState.open} autoHideDuration={6000} onClose={handleSnackClose}>
+            <Snackbar open={snackState.open} autoHideDuration={3000} onClose={handleSnackClose}>
                 <Alert onClose={handleSnackClose} severity={snackState.severity}>
                     {snackState.message}
                 </Alert>
