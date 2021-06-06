@@ -196,7 +196,7 @@ export default function ClientesForm() {
             isValid = false
         }
         //Validação do campo RG
-        if (data.rg.trim() === '') {
+        if (data.rg.trim() === '' || data.cpf.includes('_')) {
             errorTemp.rg = 'O RG deve ser preenchido corretamente'
             isValid = false
         }
@@ -211,26 +211,26 @@ export default function ClientesForm() {
             isValid = false
         }
         //Validação do campo Bairro
-        if (data.bairro === '') {
+        if (data.bairro.trim() === '') {
             errorTemp.bairro = 'O Bairro deve ser preenchido'
             isValid = false
         }
         //Validação do campo Município
-        if (data.municipio === '') {
+        if (data.municipio.trim() === '') {
             errorTemp.municipio = 'Seu Município deve ser preenchido'
             isValid = false
         }
         //Validação do campo Estado
-        if (data.uf === '') {
+        if (data.uf.trim() === '') {
             errorTemp.uf = 'O seu Estado deve ser Selecionado'
             isValid = false
         }
         //Validação do campo Telefone
-        if (data.telefone === '') {
+        if (data.telefone.trim() === '') {
             errorTemp.telefone = 'O seu Telefone deve ser preenchido corretamente'
             isValid = false
         }
-        if (data.email === '') {
+        if (data.email.trim() === '' & data.cpf.includes('@')) {
             errorTemp.email = 'O seu Email deve ser preenchido'
             isValid = false
         }
@@ -459,8 +459,9 @@ export default function ClientesForm() {
                     />}
                 </InputMask>
                 <TextField id="email"
-                    label="Email"
+                    label="E-mail"
                     variant="filled"
+                    type="email"
                     value={clientes.email}
                     onChange={handleInputChange}
                     fullWidth
