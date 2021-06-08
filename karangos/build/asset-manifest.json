@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/douglas-floriano/4not2021-1/karangos/build/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/douglas-floriano/4not2021-1/karangos/build/static/js/main.360bff70.chunk.js",
+    "main.js.map": "/douglas-floriano/4not2021-1/karangos/build/static/js/main.360bff70.chunk.js.map",
+    "runtime-main.js": "/douglas-floriano/4not2021-1/karangos/build/static/js/runtime-main.51f6c322.js",
+    "runtime-main.js.map": "/douglas-floriano/4not2021-1/karangos/build/static/js/runtime-main.51f6c322.js.map",
+    "static/js/2.c0c8597e.chunk.js": "/douglas-floriano/4not2021-1/karangos/build/static/js/2.c0c8597e.chunk.js",
+    "static/js/2.c0c8597e.chunk.js.map": "/douglas-floriano/4not2021-1/karangos/build/static/js/2.c0c8597e.chunk.js.map",
+    "static/js/3.ae70009e.chunk.js": "/douglas-floriano/4not2021-1/karangos/build/static/js/3.ae70009e.chunk.js",
+    "static/js/3.ae70009e.chunk.js.map": "/douglas-floriano/4not2021-1/karangos/build/static/js/3.ae70009e.chunk.js.map",
+    "index.html": "/douglas-floriano/4not2021-1/karangos/build/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/douglas-floriano/4not2021-1/karangos/build/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.c0c8597e.chunk.js.LICENSE.txt": "/douglas-floriano/4not2021-1/karangos/build/static/js/2.c0c8597e.chunk.js.LICENSE.txt",
+    "static/media/karangos.637f9a06.png": "/douglas-floriano/4not2021-1/karangos/build/static/media/karangos.637f9a06.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.51f6c322.js",
+    "static/js/2.c0c8597e.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.360bff70.chunk.js"
+  ]
+}
