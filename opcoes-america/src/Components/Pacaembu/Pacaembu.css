@@ -1,0 +1,11 @@
+.pacaembu {
+  background-color: rgb(86, 220, 225);
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 84vh;
+}
