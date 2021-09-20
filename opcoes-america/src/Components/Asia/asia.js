@@ -9,7 +9,6 @@ export default function Asia() {
         <>            
             <div className="asia">
                 <Title text="Região Ásia" />    
-                
             </div>
         </>
     )

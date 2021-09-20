@@ -4,26 +4,31 @@ import { Route, Switch } from 'react-router-dom'
 import './App.css'
 
 import Header from '../Header/Header'
-import Home from '../Home/Home'
+import Home from '../Home/home'
 import America from '../America/america'
-import Projeto from '../Projeto/Projeto'
-import Pacaembu from '../Pacaembu/Pacaembu'
-import Perplan from '../Perplan/Perplan'
-import Mrv from '../Mrv/Mrv'
-import PqUniversitario from '../Pacaembu/Bairros/PqUniversitario/PqUniversitario'
-import QuintaDOeste from '../Pacaembu/Bairros/QuintaDOeste/QuintaDOeste'
-import VillaDiCapri from '../Pacaembu/Bairros/VillaDiCapri/VillaDiCapri'
-import VittaResidencial from '../Pacaembu/Bairros/VittaResidencial/VittaResidencial'
-import VivaReal from '../Pacaembu/Bairros/VivaReal/VivaReal'
-import Corretores from '../Pacaembu/Bairros/VillaDiCapri/Content/Corretores'
-import Financiamento from '../Pacaembu/Bairros/VillaDiCapri/Content/Financiamento'
-import Investimento from '../Pacaembu/Bairros/VillaDiCapri/Content/Investimento'
-import ProjetosModelo from '../Pacaembu/Bairros/VillaDiCapri/Content/ProjetosModelo'
-import Apartamentos from '../Pacaembu/Bairros/VillaDiCapri/Content/Projects/Apartamentos'
-import Casas from '../Pacaembu/Bairros/VillaDiCapri/Content/Projects/Casas'
-import Ediculas from '../Pacaembu/Bairros/VillaDiCapri/Content/Projects/Ediculas'
-import Lazer from '../Pacaembu/Bairros/VillaDiCapri/Content/Projects/Lazer'
-import Sobrados from '../Pacaembu/Bairros/VillaDiCapri/Content/Projects/Sobrados'
+import Asia from '../Asia/asia'
+import Oceania from '../Oceania/oceania'
+import Antartica from '../Antartica/antartica'
+import Europa from '../Europa/europa'
+import Patagonia from '../America/Regioes/AmericaSul/Content/patagonia'
+import Cordilheira from '../America/Regioes/AmericaSul/Content/cordilheiradosandes'
+import Cartagena from '../America/Regioes/AmericaSul/Content/cartagenacolombia'
+import Vulcao from '../America/Regioes/AmericaSul/Content/vulcaoquilotoa'
+import Pantanal from '../America/Regioes/AmericaSul/Content/pantanal'
+import AmericaNorte from '../America/Regioes/AmericaNorte/americanorte'
+import AmericaCentral from '../America/Regioes/AmericaCentral/americacentral'
+import Equador from '../America/Regioes/Equador/equador'
+import AmericaSul from '../America/Regioes/AmericaSul/americasul'
+import Inferiores from '../America/Regioes/Inferiores/inferiores'
+
+
+
+import Hidrografia from '../America/Regioes/AmericaSul/Content/Projects/hidrografia'
+import Clima from '../America/Regioes/AmericaSul/Content/Projects/clima'
+import Fauna from '../America/Regioes/AmericaSul/Content/Projects/fauna'
+import Flora from '../America/Regioes/AmericaSul/Content/Projects/flora'
+import Desmatamento from '../America/Regioes/AmericaSul/Content/Projects/desmatamento'
+
 
 function App() {
   return (
@@ -34,24 +39,25 @@ function App() {
         <Switch>
           <Route exact path="/" render={(props) => <Home />}></Route>
           <Route exact path="/america" render={(props) => <America />}></Route>
-          <Route exact path="/projeto" render={(props) => <Projeto />}></Route>
-          <Route exact path="/pacaembu" render={(props) => <Pacaembu />}></Route>
-          <Route exact path="/perplan" render={(props) => <Perplan />}></Route>
-          <Route exact path="/mrv" render={(props) => <Mrv />}></Route>
-          <Route exact path="/pacaembu/pqUniversitario" render={(props) => <PqUniversitario />}></Route>
-          <Route exact path="/pacaembu/quintaDOeste" render={(props) => <QuintaDOeste />}></Route>
-          <Route exact path="/pacaembu/villaDiCapri" render={(props) => <VillaDiCapri />}></Route>
-          <Route exact path="/pacaembu/vittaResidencial" render={(props) => <VittaResidencial />}></Route>
-          <Route exact path="/pacaembu/vivaReal" render={(props) => <VivaReal />}></Route>
-          <Route exact path="/pacaembu/villaDiCapri/corretores" render={(props) => <Corretores />}></Route>
-          <Route exact path="/pacaembu/villaDiCapri/financiamento" render={(props) => <Financiamento />}></Route>
-          <Route exact path="/pacaembu/villaDiCapri/investimento" render={(props) => <Investimento />}></Route>
-          <Route exact path="/pacaembu/villaDiCapri/projetosModelo" render={(props) => <ProjetosModelo />}></Route>
-          <Route exact path="/pacaembu/villaDiCapri/projetosModelo/apartamentos" render={(props) => <Apartamentos />}></Route>
-          <Route exact path="/pacaembu/villaDiCapri/projetosModelo/casas" render={(props) => <Casas />}></Route>
-          <Route exact path="/pacaembu/villaDiCapri/projetosModelo/ediculas" render={(props) => <Ediculas />}></Route>
-          <Route exact path="/pacaembu/villaDiCapri/projetosModelo/lazer" render={(props) => <Lazer />}></Route>
-          <Route exact path="/pacaembu/villaDiCapri/projetosModelo/sobrados" render={(props) => <Sobrados />}></Route>
+          <Route exact path="/asia" render={(props) => <Asia />}></Route>
+          <Route exact path="/oceania" render={(props) => <Oceania />}></Route>
+          <Route exact path="/antartica" render={(props) => <Antartica />}></Route>
+          <Route exact path="/europa" render={(props) => <Europa />}></Route>
+          <Route exact path="/america/americanorte" render={(props) => <AmericaNorte />}></Route>
+          <Route exact path="/america/americacentral" render={(props) => <AmericaCentral />}></Route>
+          <Route exact path="/america/equador" render={(props) => <Equador />}></Route>
+          <Route exact path="america/inferiores" render={(props) => <Inferiores />}></Route>
+          <Route exact path="/america/americasul" render={(props) => <AmericaSul />}></Route>
+          <Route exact path="/america/americasul/patagonia" render={(props) => <Patagonia />}></Route>
+          <Route exact path="/america/americasul/cordilheiradosandes" render={(props) => <Cordilheira />}></Route>
+          <Route exact path="/america/americasul/cartagenacolombia" render={(props) => <Cartagena />}></Route>
+          <Route exact path="/america/americasul/vulcaoquilotoa" render={(props) => <Vulcao />}></Route>
+          <Route exact path="/america/americasul/pantanal" render={(props) => <Pantanal />}></Route>
+          <Route exact path="/america/americasul/pantanal/hidrografia" render={(props) => <Hidrografia />}></Route>
+          <Route exact path="/america/americasul/pantanal/clima" render={(props) => <Clima />}></Route>
+          <Route exact path="/america/americasul/pantanal/fauna" render={(props) => <Fauna />}></Route>
+          <Route exact path="/america/americasul/pantanal/flora" render={(props) => <Flora />}></Route>
+          <Route exact path="/america/americasul/pantanal/desmatamento" render={(props) => <Desmatamento />}></Route>
         </Switch>
       </main>
     </>
