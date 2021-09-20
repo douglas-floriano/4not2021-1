@@ -1,0 +1,12 @@
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+  padding-top: 5px;
+  font-family: "Raleway", sans-serif;
+}
+
